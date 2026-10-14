@@ -1,68 +1,203 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Link the style sheet here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Best Cars Dealership</title>
+
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+
+    <style>
+        body {
+            background-color: #f5f7fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .team-container {
+            width: 85%;
+            margin: 45px auto;
+        }
+
+        .banner {
+            text-align: center;
+            padding: 30px 20px;
+            line-height: 1.8;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: space-around;
+            gap: 25px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .team-card {
+            width: 30%;
+            min-width: 220px;
+            text-align: center;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+        .team-card .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .team-role {
+            color: #147d80;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .team-card {
+                width: 100%;
+            }
+
+            .team-container {
+                width: 95%;
+            }
+        }
+    </style>
 </head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light"
+     style="background-color: darkturquoise; min-height: 1in;">
+
     <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
-        </div>
-      </div>
+        <h2 style="padding-right: 5%;">Dealerships</h2>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
-        </div>
-      </div>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarText"
+                aria-controls="navbarText"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: larger;"
+                       href="/">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" style="font-size: larger;"
+                       href="/about" aria-current="page">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: larger;"
+                       href="/contact">Contact Us</a>
+                </li>
+            </ul>
         </div>
-      </div>
     </div>
+</nav>
+
+<div class="card team-container">
+
+    <div class="banner" name="about-header">
+        <h1>About Us</h1>
+
+        <p>
+            Welcome to Best Cars dealership, home to the best cars in
+            North America. We deal in selling domestic and imported cars
+            at reasonable prices.
+        </p>
+
+        <p>
+            With dealership branches across the United States, our goal
+            is to make finding your next vehicle simple, transparent,
+            and reliable. We help customers explore their options and
+            make informed decisions through customer reviews and
+            information about our dealerships.
+        </p>
+
+        <p>
+            At Best Cars, we believe that excellent service begins with
+            honesty, customer satisfaction, and a commitment to quality.
+            Our team works hard to make every customer's car-buying
+            experience a positive one.
+        </p>
     </div>
+
+    <div class="team-members">
+
+        <div class="card team-card">
+            <img class="card-img-top"
+                 src="https://randomuser.me/api/portraits/men/32.jpg"
+                 alt="Portrait of John Wilson">
+
+            <div class="card-body">
+                <p class="title">John Wilson</p>
+                <p class="team-role">Chief Executive Officer</p>
+
+                <p class="card-text">
+                    John leads the company's overall strategy and
+                    focuses on building trusted relationships with
+                    customers and dealership partners.
+                </p>
+
+                <p>john.wilson@bestcars.example</p>
+            </div>
+        </div>
+
+        <div class="card team-card">
+            <img class="card-img-top"
+                 src="https://randomuser.me/api/portraits/women/44.jpg"
+                 alt="Portrait of Emma Cooper">
+
+            <div class="card-body">
+                <p class="title">Emma Cooper</p>
+                <p class="team-role">Chief Marketing Officer</p>
+
+                <p class="card-text">
+                    Emma oversees marketing initiatives and customer
+                    engagement, helping customers discover dealerships
+                    and vehicles that suit their needs.
+                </p>
+
+                <p>emma.cooper@bestcars.example</p>
+            </div>
+        </div>
+
+        <div class="card team-card">
+            <img class="card-img-top"
+                 src="https://randomuser.me/api/portraits/men/75.jpg"
+                 alt="Portrait of Enoei Uchida">
+
+            <div class="card-body">
+                <p class="title">Enoei Uchida</p>
+                <p class="team-role">Chief Financial Officer</p>
+
+                <p class="card-text">
+                    Enoei manages financial planning and business
+                    operations, supporting the company's long-term
+                    stability and responsible growth.
+                </p>
+
+                <p>enoei.uchida@bestcars.example</p>
+            </div>
+        </div>
+
     </div>
-    
 </div>
 
+</body>
 </html>
