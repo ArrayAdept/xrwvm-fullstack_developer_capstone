@@ -15,6 +15,7 @@ urlpatterns = [
     path('dealers/', TemplateView.as_view(template_name="index.html"), name='dealers_page'),
     path('dealer/<int:dealer_id>', TemplateView.as_view(template_name="index.html"), name='dealer_detail_page'),
     path('postreview/<int:dealer_id>', TemplateView.as_view(template_name="index.html"), name='post_review_page'),
+    path('dealer/<int:dealer_id>',TemplateView.as_view(template_name="index.html")),
 
     # Static pages
     path('about/', TemplateView.as_view(template_name="About.html"), name='about'),
