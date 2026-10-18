@@ -31,8 +31,7 @@ jobs:
       - name: Run Linter
         run: |
           pwd
-          # Ignore non-critical formatting/length warnings (E501, W503)
-          find . -name "*.py" -not -path "*/migrations/*" -exec flake8 {} --ignore=E501,W503 --exit-zero +
+          find . -name "*.py" -exec flake8 {} '\+'
           echo "Linted all the python files successfully"
 
   lint_js:
@@ -49,9 +48,9 @@ jobs:
           node-version: '20'
 
       - name: Install JSHint
-        run: npm install -g jshint
+        run: npm install jshint --global
 
       - name: Run Linter
         run: |
-          find ./server/database -name "*.js" -exec jshint {} + || true
+          find ./server/database -name "*.js" -exec jshint {} '\+'
           echo "Linted all the js files successfully"
